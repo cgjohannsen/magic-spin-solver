@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+
+\textwidth 6.5in
+\oddsidemargin 0.0in %this is a 1-inch margin
+\evensidemargin 1.0in %matching 1-inch margin
+
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{listings}
+\interfootnotelinepenalty=10000
+
+\newcommand{\HRule}{\rule{\linewidth}{0.2mm}}
+
+\begin{document}
+
+\title{Applied Formal Methods\\ Final Project}
+
+\author{Chris Johannsen, MagicSPINSolver}
+
+\maketitle
+
+\begin{spacing}{0.5}
+\noindent \HRule \\
+\noindent \HRule
+\end{spacing}
+
+\bigskip 
+
+{\bf Project Plan}\\
+\begin{enumerate}
+\item Define your group and the parameters of your project\\
+\\
+The MagicSPINSolver group is a single member group that will focus on creating valid magic square solutions to blank or semi-filled magic square boards. This project will first attempt to create valid solutions to 2x2 blank boards using the SPIN model checker. From there, the project will be easily scalable to solve 3x3 boards and solve semi completed boards.
+\\
+\item What are the members of your group?\\
+\\
+Chris Johannsen
+\\
+\item What is your group name?\\
+\\
+MagicSPINSolver
+\\
+\item What formal method will you be using?\\
+\\
+The project will use explicit model checking using SPIN. If time/resources allow, other tools will be considered to compare the total memory usage and times to run.
+\\
+\item What specifications will you verify?\\
+\\
+The first and most important specification is that the defining property of a magic square is upheld, that is that the sum of each respective row and column are all equal. The other specification that will help in creating a specific magic square is that the sum of each row/column is a pre-defined value.
+\\
+\item What system will you analyze?\\
+\\
+The project will look to analyze the system of blank and semi-complete magic square boards, of both 2x2 and 3x3 size.
+\\
+\item What does success look like for your project?\\
+\\
+Success will come if the project can correctly and efficiently come up with solutions of magic square boards using any value as a row/column sum for blank or partially complete magic square boards. The project will also look to compare the efficiency of different tools and methods to see if there is a better way to solve this problem.
+\\
+\item How will you demonstrate your analysis?
+\\
+The project will demonstrate its analysis by providing example solutions for magic square boards, as well as benchmarks for each solution for each method used to solve the magic square including the memory usage and time taken for each run.
+\\
+\item Logistics
+\\
+The project will be organized in a Github repository. There will be separate directories for different areas of documentation such as the project proposal, final and weekly reports, and others. As well there will be different directories for the source code, example commands that can be run on the source code to reproduce the results, and the results reported in an organized and concise manner.
+\\
+\item Proposed Timeline
+\\
+\begin{tabular}{| l | p{10cm} |}
+\hline
+{\bf Week of} & {\bf Tasks to be completed} \\ \hline
+
+10/29 & Begin work on SPIN model for 2x2 blank magic square and decide if SPIN is a feasible route to go for solving said problem. \\ \hline
+
+11/5 & Continue work on SPIN model for 2x2 system. \\ \hline
+
+11/12 & Complete SPIN model and begin proper model checking. Analyze results of model checking to see how feasibly the model might scale and how the model could be changed to become more efficient. \\ \hline
+
+11/19 & Attempt to scale model for 2x2 system to a 3x3 system. If innefficent, look into methods to make model checker more efficient. Also modify model to work on partially complete magic squares (should be relatively arbitary) \\ \hline
+
+11/26 & Take results from previous model checking tests and organize the data accordingly. Write final report and prepare presentation for class \\ \hline
+
+\end{tabular}
+
+\end{enumerate}
+
+\end{document}
