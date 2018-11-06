@@ -1,0 +1,1 @@
+!([]!(row_1_sum == target_sum && row_2_sum == target_sum && col_1_sum == target_sum && col_2_sum == target_sum))
