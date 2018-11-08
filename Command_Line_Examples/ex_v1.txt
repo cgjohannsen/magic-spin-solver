@@ -1,61 +1,25 @@
-[chrisj17@linuxremote1 Magic_Squares]$ cat MS_Model_v1.pml > pan_in
-[chrisj17@linuxremote1 Magic_Squares]$ spin -F ms_claim_v1.ltl >> pan_in
-[chrisj17@linuxremote1 Magic_Squares]$ spin -a pan_in
-[chrisj17@linuxremote1 Magic_Squares]$ gcc -o pan pan.c
-[chrisj17@linuxremote1 Magic_Squares]$ ./pan -a
-warning: for p.o. reduction to be valid the never claim must be stutter-invariant
-(never claims generated from LTL formulae are stutter-invariant)
-pan:1: assertion violated  !(((((row_1_sum==target_sum)&&(row_2_sum==target_sum))&&(col_1_sum==target_sum))&&(col_2_sum==target_sum))) (at depth 48)
-pan: wrote pan_in.trail
-
-(Spin Version 6.4.6 -- 2 December 2016)
-Warning: Search not completed
-        + Partial Order Reduction
-
-Full statespace search for:
-        never claim             + (never_0)
-        assertion violations    + (if within scope of claim)
-        acceptance   cycles     + (fairness disabled)
-        invalid end states      - (disabled by never claim)
-
-State-vector 84 byte, depth reached 97, errors: 1
-    11330 states, stored
-    24128 states, matched
-    35458 transitions (= stored+matched)
-        0 atomic steps
-hash conflicts:         1 (resolved)
-
-Stats on memory usage (in Megabytes):
-    1.210       equivalent memory usage for states (stored*(State-vector + overhead))
-    1.066       actual memory usage for states (compression: 88.12%)
-                state-vector as stored = 71 byte + 28 byte overhead
-  128.000       memory used for hash table (-w24)
-    0.534       memory used for DFS stack (-m10000)
-  129.511       total actual memory usage
-
-
-
-pan: elapsed time 0.08 seconds
-pan: rate    141625 states/second
-[chrisj17@linuxremote1 Magic_Squares]$ spin -t pan_in
-Never claim moves to line 118   [(1)]
-spin: pan_in:117, Error: assertion violated
-spin: text of failed assertion: assert(!(((((row_1_sum==target_sum)&&(row_2_sum==target_sum))&&(col_1_sum==target_sum))&&(col_2_sum==target_sum))))
-Never claim moves to line 117   [assert(!(((((row_1_sum==target_sum)&&(row_2_sum==target_sum))&&(col_1_sum==target_sum))&&(col_2_sum==target_sum))))]
-spin: trail ends after 49 steps
-#processes: 4
-                target_sum = 10
-                board[0] = 5
-                board[1] = 5
-                board[2] = 5
-                board[3] = 5
-                row_1_sum = 10
-                row_2_sum = 10
-                col_1_sum = 10
-                col_2_sum = 10
- 49:    proc  3 (fill_board:1) pan_in:68 (state 42)
- 49:    proc  2 (fill_board:1) pan_in:68 (state 42)
- 49:    proc  1 (fill_board:1) pan_in:68 (state 42)
- 49:    proc  0 (fill_board:1) pan_in:68 (state 42)
- 49:    proc  - (never_0:1) pan_in:116 (state 6)
-4 processes created
+[chrisj17@linuxremote1 Magic_Squares]$ spin -n1 pan_in
+warning: never claim not used in random simulation
+      timeout
+#processes: 10
+                target_sum = 15
+                board[0] = 4
+                board[1] = 1
+                board[2] = 7
+                board[3] = 8
+                board[4] = 6
+                board[5] = 5
+                board[6] = 9
+                board[7] = 2
+                board[8] = 3
+117:    proc  9 (fill_board:1) pan_in:56 (state 15)
+117:    proc  8 (fill_board:1) pan_in:51 (state 12)
+117:    proc  7 (fill_board:1) pan_in:86 (state 31) <valid end state>
+117:    proc  6 (fill_board:1) pan_in:66 (state 21)
+117:    proc  5 (fill_board:1) pan_in:71 (state 24)
+117:    proc  4 (fill_board:1) pan_in:81 (state 30)
+117:    proc  3 (fill_board:1) pan_in:76 (state 27)
+117:    proc  2 (fill_board:1) pan_in:46 (state 9)
+117:    proc  1 (fill_board:1) pan_in:61 (state 18)
+117:    proc  0 (:init::1) pan_in:31 (state 10) <valid end state>
+10 processes created

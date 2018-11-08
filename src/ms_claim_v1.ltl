@@ -1,1 +1,0 @@
-<>(row1_sum == target_sum && row2_sum == target_sum && col1_sum == target_sum && col2_sum == target_sum && board[0] == 4)
