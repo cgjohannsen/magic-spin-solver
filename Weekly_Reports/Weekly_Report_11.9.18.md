@@ -19,8 +19,9 @@ I got the 2x2 system to function properly. This did not take too much work, as t
 The 3x3 model is where the fun begins. The notable differences between this system and the 2x2 system are the additional rule as stated above wherein each space must exhibit a unique number, and the number of states possible explodes. Modeling the additional unique number rule is simple enough, and runnning a basic simulation on the model will output a magic square whose sum is not necessarily valid, though each space has a unique number (refer to the /Command_Line_Examples directory for this in action). 
 
 Notably, I was able to get the model to output a valid 3x3 magic square with a target sum of 15. This can be seen in the /Command_Line_Examples directory. The magic square the model outputted is:
+Magic | Square | Example
+ --- | --- | ---
  6 | 1 | 8 
---- | --- | --- 
  7 | 5 | 3 
  2 | 9 | 4 
 
