@@ -22,7 +22,6 @@ Notably, I was able to get the model to output a valid 3x3 magic square with a t
 | 6 | 1 | 8 |
 |---|---|---|
 | 7 | 5 | 3 |
-|---|---|---|
 | 2 | 9 | 4 |
 
 The next step is to enable the model to reason over semi complete magic squares. I have attempted to do this by adding to the ltl specification that not only will each row, column, and diagonal eventually sum to the target sum, but that specific spaces will correspond to certain values. This has proved fruitless thus far, but I will continue to tinker. I may try and edit the model itself to get this to work.
