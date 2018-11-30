@@ -1,0 +1,1 @@
+<>(row1 && row2 && row3 && col1 && col2 && col3 && diag1 && diag2 && (board[1] == 7) && (board[3] == 9) && (board[5] == 1) && (board[6] == 4))
