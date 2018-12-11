@@ -1,0 +1,1 @@
+<>((spaces_filled == 2) && (output[0] != 0) && (output[2] != 0) && (seed == 1)) 
